@@ -9,7 +9,7 @@ package dsca;
  * @author sarah
  */
 public interface PQInterface {
-    public void enqueue(int priorityKey, Bus newBus);
+    public void enqueue(int priorityKey, Object element);
     public Object dequeue();
     public Object frontOfQueue();
     public int size();
