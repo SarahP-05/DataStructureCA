@@ -19,6 +19,11 @@ public class MyPQ implements PQInterface{
         stops = new SLList();
     }
     
+
+    public SLList getStopsList() {
+    return stops; 
+}
+    
       @Override
     public boolean isEmpty() { //checks to see if SLList is empty
         return stops.isEmpty();

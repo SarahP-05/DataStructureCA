@@ -4,6 +4,9 @@
  */
 package dsca;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
+
 /**
  *
  * @author sarah
@@ -15,42 +18,10 @@ public class AdminCrud extends javax.swing.JFrame {
      */
     public AdminCrud() {
         initComponents();
+        String allBuses = Bus.getAllBusesInfo();
     }
     
-     public void displayAllLists() {
-    StringBuilder output = new StringBuilder();
-
-    output.append("=== BUS ===\n");
-    if(AdminManager.busList.isEmpty()) {
-        output.append("No buses available.\n");
-    } else {
-        output.append(AdminManager.busList.displayList());
-    }
-
-    output.append("\n=== LUAS ===\n");
-    if(AdminManager.luasList.isEmpty()) {
-        output.append("No Luas available.\n");
-    } else {
-        output.append(AdminManager.luasList.displayList());
-    }
-
-    output.append("\n=== DART ===\n");
-    if(AdminManager.dartList.isEmpty()) {
-        output.append("No DART available.\n");
-    } else {
-        output.append(AdminManager.dartList.displayList());
-    }
-
-    output.append("\n=== TRAIN ===\n");
-    if(AdminManager.trainList.isEmpty()) {
-        output.append("No trains available.\n");
-    } else {
-        output.append(AdminManager.trainList.displayList());
-    }
-
-    // Show in JTextArea
-    adminTA.setText(output.toString());
-}
+     
      
      
 
@@ -65,21 +36,6 @@ public class AdminCrud extends javax.swing.JFrame {
 
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        backToMainBtn1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        transportNo = new javax.swing.JTextField();
-        Stop1 = new javax.swing.JTextField();
-        Stop2 = new javax.swing.JTextField();
-        Stop3 = new javax.swing.JTextField();
-        Stop4 = new javax.swing.JTextField();
-        exitBtn1 = new javax.swing.JButton();
-        addBusBtn = new javax.swing.JButton();
-        clearTF1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         backToMainBtn2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -113,120 +69,36 @@ public class AdminCrud extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         searchDeleteBtn = new javax.swing.JButton();
         DeleteBusBtn = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        backToMainBtn1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        BusNumberTF = new javax.swing.JTextField();
+        exitBtn1 = new javax.swing.JButton();
+        addBusBtn = new javax.swing.JButton();
+        clearTF1 = new javax.swing.JButton();
+        StopCB1 = new javax.swing.JComboBox<>();
+        StopCB2 = new javax.swing.JComboBox<>();
+        StopCB3 = new javax.swing.JComboBox<>();
+        StopCB4 = new javax.swing.JComboBox<>();
+        Stop1TF = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        Stop2TF = new javax.swing.JTextField();
+        Stop3TF = new javax.swing.JTextField();
+        Stop4TF = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        BusNameTF = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
-
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
-
-        backToMainBtn1.setText("Back to Main Menu");
-        backToMainBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backToMainBtn1ActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("Bus Number");
-
-        jLabel3.setText("Stop 1");
-
-        jLabel4.setText("Stop 2");
-
-        jLabel5.setText("Stop 3");
-
-        jLabel6.setText("Stop 4");
-
-        transportNo.setText("jTextField2");
-
-        Stop1.setText("jTextField3");
-
-        Stop2.setText("jTextField4");
-
-        Stop3.setText("jTextField5");
-
-        Stop4.setText("jTextField6");
-
-        exitBtn1.setText("Exit");
-        exitBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBtn1ActionPerformed(evt);
-            }
-        });
-
-        addBusBtn.setText("Add");
-
-        clearTF1.setText("Clear Text Areas");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(34, 34, 34)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(transportNo, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                    .addComponent(Stop1)
-                    .addComponent(Stop2)
-                    .addComponent(Stop3)
-                    .addComponent(Stop4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
-                .addComponent(addBusBtn)
-                .addGap(103, 103, 103))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(backToMainBtn1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(exitBtn1)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(clearTF1)
-                        .addGap(72, 72, 72))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(108, 108, 108)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(transportNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(Stop1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addBusBtn))
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(Stop2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(clearTF1)
-                .addGap(5, 5, 5)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(Stop3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(Stop4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backToMainBtn1)
-                    .addComponent(exitBtn1))
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Create", jPanel1);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -274,7 +146,7 @@ public class AdminCrud extends javax.swing.JFrame {
                                 .addComponent(displayAll)
                                 .addGap(14, 14, 14))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 48, Short.MAX_VALUE)))
+                        .addGap(0, 132, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -284,7 +156,7 @@ public class AdminCrud extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(displayAll)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backToMainBtn2)
                     .addComponent(exitBtn2))
@@ -381,7 +253,7 @@ public class AdminCrud extends javax.swing.JFrame {
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(searchBtn1)
-                        .addGap(0, 159, Short.MAX_VALUE)))
+                        .addGap(0, 243, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -419,7 +291,7 @@ public class AdminCrud extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(clearTF2)
                     .addComponent(updateBusBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backToMainBtn3)
                     .addComponent(exitBtn3))
@@ -444,6 +316,7 @@ public class AdminCrud extends javax.swing.JFrame {
             }
         });
 
+        jTextArea2.setEditable(false);
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
         jScrollPane2.setViewportView(jTextArea2);
@@ -457,7 +330,7 @@ public class AdminCrud extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap(285, Short.MAX_VALUE)
+                .addContainerGap(369, Short.MAX_VALUE)
                 .addComponent(backToMainBtn4)
                 .addGap(18, 18, 18)
                 .addComponent(exitBtn4)
@@ -488,7 +361,7 @@ public class AdminCrud extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(DeleteBusBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backToMainBtn4)
                     .addComponent(exitBtn4))
@@ -496,6 +369,162 @@ public class AdminCrud extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Delete", jPanel4);
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+
+        backToMainBtn1.setText("Back to Main Menu");
+        backToMainBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backToMainBtn1ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Bus Number");
+
+        jLabel3.setText("Stop 1");
+
+        jLabel4.setText("Stop 2");
+
+        jLabel5.setText("Stop 3");
+
+        jLabel6.setText("Stop 4");
+
+        exitBtn1.setText("Exit");
+        exitBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBtn1ActionPerformed(evt);
+            }
+        });
+
+        addBusBtn.setText("Add");
+        addBusBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addBusBtnActionPerformed(evt);
+            }
+        });
+
+        clearTF1.setText("Clear Text Areas");
+
+        StopCB1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bord Gais Energy Theatre", "Grand Canal Dock", "George's Dock", "Spencer Dock", "Mayor Square", "Busaras", "Custom House", "Custom House Quay", "Point Village", "Point Square", "IFSC", "Tara Street", "OConnell Street", "North Wall Quay", "Hanover Quay", "Barrow Street", "Connolly Station" }));
+
+        StopCB2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bord Gais Energy Theatre", "Grand Canal Dock", "George's Dock", "Spencer Dock", "Mayor Square", "Busaras", "Custom House", "Custom House Quay", "Point Village", "Point Square", "IFSC", "Tara Street", "OConnell Street", "North Wall Quay", "Hanover Quay", "Barrow Street", "Connolly Station" }));
+
+        StopCB3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bord Gais Energy Theatre", "Grand Canal Dock", "George's Dock", "Spencer Dock", "Mayor Square", "Busaras", "Custom House", "Custom House Quay", "Point Village", "Point Square", "IFSC", "Tara Street", "OConnell Street", "North Wall Quay", "Hanover Quay", "Barrow Street", "Connolly Station" }));
+
+        StopCB4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bord Gais Energy Theatre", "Grand Canal Dock", "George's Dock", "Spencer Dock", "Mayor Square", "Busaras", "Custom House", "Custom House Quay", "Point Village", "Point Square", "IFSC", "Tara Street", "OConnell Street", "North Wall Quay", "Hanover Quay", "Barrow Street", "Connolly Station" }));
+
+        jLabel1.setText("Minutes Due (PQ)");
+
+        jLabel13.setText("Minutes Due (PQ)");
+
+        jLabel14.setText("Minutes Due (PQ)");
+
+        jLabel15.setText("Minutes Due (PQ)");
+
+        Stop2TF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Stop2TFActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setText("Bus Name");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(StopCB1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(StopCB2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(StopCB3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(StopCB4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(BusNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel2))))
+                .addContainerGap(183, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(backToMainBtn1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(exitBtn1)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(addBusBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(clearTF1)
+                            .addComponent(Stop2TF, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Stop3TF, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Stop4TF, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(BusNumberTF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                                .addComponent(Stop1TF, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addGap(52, 52, 52))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(108, 108, 108)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BusNumberTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16)
+                    .addComponent(BusNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(43, 43, 43)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(StopCB1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Stop1TF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(StopCB2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(Stop2TF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(StopCB3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14)
+                    .addComponent(Stop3TF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(StopCB4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15)
+                    .addComponent(Stop4TF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(clearTF1)
+                    .addComponent(addBusBtn))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backToMainBtn1)
+                    .addComponent(exitBtn1))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Create", jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -505,7 +534,7 @@ public class AdminCrud extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Create");
@@ -523,11 +552,6 @@ public class AdminCrud extends javax.swing.JFrame {
            this.dispose();
     }//GEN-LAST:event_backToMainBtn3ActionPerformed
 
-    private void backToMainBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToMainBtn1ActionPerformed
-        new FirstJFrame().setVisible(true);
-           this.dispose();
-    }//GEN-LAST:event_backToMainBtn1ActionPerformed
-
     private void backToMainBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToMainBtn2ActionPerformed
         new FirstJFrame().setVisible(true);
            this.dispose();
@@ -538,10 +562,6 @@ public class AdminCrud extends javax.swing.JFrame {
            this.dispose();
     }//GEN-LAST:event_backToMainBtn4ActionPerformed
 
-    private void exitBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtn1ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_exitBtn1ActionPerformed
-
     private void exitBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtn2ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_exitBtn2ActionPerformed
@@ -551,16 +571,104 @@ public class AdminCrud extends javax.swing.JFrame {
     }//GEN-LAST:event_exitBtn4ActionPerformed
 
     private void displayAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayAllActionPerformed
-      displayAllLists();
+        String allBuses = Bus.getAllBusesInfo(); 
+        adminTA.setText(allBuses); 
     }//GEN-LAST:event_displayAllActionPerformed
+
+    private void exitBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtn1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_exitBtn1ActionPerformed
+
+    private void backToMainBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToMainBtn1ActionPerformed
+        new FirstJFrame().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_backToMainBtn1ActionPerformed
+
+    private void Stop2TFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Stop2TFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Stop2TFActionPerformed
+
+    private void addBusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBusBtnActionPerformed
+                                             
+    try {
+
+        String busNumber = BusNumberTF.getText();
+        String busName = BusNameTF.getText();
+
+        String stop1 = StopCB1.getSelectedItem().toString();
+        String stop2 = StopCB2.getSelectedItem().toString();
+        String stop3 = StopCB3.getSelectedItem().toString();
+        String stop4 = StopCB4.getSelectedItem().toString();
+
+        int p1 = Integer.parseInt(Stop1TF.getText());
+        int p2 = Integer.parseInt(Stop2TF.getText());
+        int p3 = Integer.parseInt(Stop3TF.getText());
+        int p4 = Integer.parseInt(Stop4TF.getText());
+
+        // Prevent duplicate stops
+        if(stop1.equals(stop2) || stop1.equals(stop3) || stop1.equals(stop4) ||
+           stop2.equals(stop3) || stop2.equals(stop4) ||
+           stop3.equals(stop4)){
+
+            javax.swing.JOptionPane.showMessageDialog(this,"Stops cannot be the same!");
+            return;
+        }
+
+        // Prevent duplicate priorities
+        if(p1==p2 || p1==p3 || p1==p4 ||
+           p2==p3 || p2==p4 ||
+           p3==p4){
+
+            javax.swing.JOptionPane.showMessageDialog(this,"Priority numbers must be unique!");
+            return;
+        }
+
+        // Check if bus exists
+        Bus bus = Bus.getBus(busNumber);
+
+        if(bus == null){
+            bus = new Bus(busName, busNumber);
+            bus.addToSystem();
+        }
+
+        // Add stops to PQ
+        bus.addStop(p1, stop1);
+        bus.addStop(p2, stop2);
+        bus.addStop(p3, stop3);
+        bus.addStop(p4, stop4);
+
+        // Save to file
+        PrintWriter pw = new PrintWriter(new FileWriter("src/dsca/busData.txt", true));
+
+        pw.println(busNumber + "," + busName + "," + p1 + "," + stop1);
+        pw.println(busNumber + "," + busName + "," + p2 + "," + stop2);
+        pw.println(busNumber + "," + busName + "," + p3 + "," + stop3);
+        pw.println(busNumber + "," + busName + "," + p4 + "," + stop4);
+
+        pw.close();
+
+        javax.swing.JOptionPane.showMessageDialog(this,"Bus added successfully!");
+
+    } catch(Exception e){
+        javax.swing.JOptionPane.showMessageDialog(this,"Error adding bus");
+        e.printStackTrace();
+    }
+
+    }//GEN-LAST:event_addBusBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField BusNameTF;
+    private javax.swing.JTextField BusNumberTF;
     private javax.swing.JButton DeleteBusBtn;
-    private javax.swing.JTextField Stop1;
-    private javax.swing.JTextField Stop2;
-    private javax.swing.JTextField Stop3;
-    private javax.swing.JTextField Stop4;
+    private javax.swing.JTextField Stop1TF;
+    private javax.swing.JTextField Stop2TF;
+    private javax.swing.JTextField Stop3TF;
+    private javax.swing.JTextField Stop4TF;
+    private javax.swing.JComboBox<String> StopCB1;
+    private javax.swing.JComboBox<String> StopCB2;
+    private javax.swing.JComboBox<String> StopCB3;
+    private javax.swing.JComboBox<String> StopCB4;
     private javax.swing.JButton addBusBtn;
     private javax.swing.JTextArea adminTA;
     private javax.swing.JButton backToMainBtn1;
@@ -575,9 +683,14 @@ public class AdminCrud extends javax.swing.JFrame {
     private javax.swing.JButton exitBtn3;
     private javax.swing.JButton exitBtn4;
     private javax.swing.Box.Filler filler1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -598,7 +711,6 @@ public class AdminCrud extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JButton searchBtn1;
     private javax.swing.JButton searchDeleteBtn;
-    private javax.swing.JTextField transportNo;
     private javax.swing.JButton updateBusBtn;
     private javax.swing.JTextField updateStopNo1;
     private javax.swing.JTextField updateStopNo2;

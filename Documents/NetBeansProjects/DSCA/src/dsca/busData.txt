@@ -1,0 +1,43 @@
+15,Docklands Connector,1,Grand Canal Dock
+15,Docklands Connector,2,Bord Gais Energy Theatre
+15,Docklands Connector,5,Spencer Dock
+15,Docklands Connector,7,Point Square
+
+27,Docklands Shuttle,1,Connolly Station
+27,Docklands Shuttle,2,Mayor Square
+27,Docklands Shuttle,6,North Wall Quay
+27,Docklands Shuttle,7,Point Village
+
+56A,River Liffey Route,2,Custom House
+56A,River Liffey Route,4,George's Dock
+56A,River Liffey Route,5,IFSC
+56A,River Liffey Route,9,Spencer Dock
+
+77,Docklands Express,3,Tara Street
+77,Docklands Express,4,Custom House Quay
+77,Docklands Express,5,Mayor Square
+77,Docklands Express,11,Point Square
+
+14,Docklands Circular,2,Grand Canal Dock
+14,Docklands Circular,3,Hanover Quay
+14,Docklands Circular,4,Barrow Street
+14,Docklands Circular,5,Spencer Dock
+
+33,Docklands City Link,5,OConnell Street
+33,Docklands City Link,6,Tara Street
+33,Docklands City Link,7,Custom House
+33,Docklands City Link,9,IFSC
+
+41,Airport Docklands Route,1,Connolly Station
+41,Airport Docklands Route,4,Busaras
+41,Airport Docklands Route,5,Custom House Quay
+41,Airport Docklands Route,6,Point Village
+
+90,Docklands Orbit,7,Spencer Dock
+90,Docklands Orbit,8,Mayor Square
+90,Docklands Orbit,9,Grand Canal Dock
+90,Docklands Orbit,10,Bord Gais Energy Theatre
+27C,Test1,7,Custom House
+27C,Test1,4,Bord Gais Energy Theatre
+27C,Test1,5,George's Dock
+27C,Test1,1,North Wall Quay
