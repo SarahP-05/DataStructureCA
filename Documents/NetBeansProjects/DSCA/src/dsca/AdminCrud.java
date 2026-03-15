@@ -36,39 +36,6 @@ public class AdminCrud extends javax.swing.JFrame {
 
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel2 = new javax.swing.JPanel();
-        backToMainBtn2 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        adminTA = new javax.swing.JTextArea();
-        displayAll = new javax.swing.JButton();
-        exitBtn2 = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        backToMainBtn3 = new javax.swing.JButton();
-        exitBtn3 = new javax.swing.JButton();
-        searchBtn1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        updateTransportCBox = new javax.swing.JComboBox<>();
-        clearTF2 = new javax.swing.JButton();
-        updateBusBtn = new javax.swing.JButton();
-        updateTransportNo = new javax.swing.JTextField();
-        updateStopNo1 = new javax.swing.JTextField();
-        updateStopNo2 = new javax.swing.JTextField();
-        updateStopNo3 = new javax.swing.JTextField();
-        updateStopno4 = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
-        backToMainBtn4 = new javax.swing.JButton();
-        exitBtn4 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jTextField2 = new javax.swing.JTextField();
-        searchDeleteBtn = new javax.swing.JButton();
-        DeleteBusBtn = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         backToMainBtn1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -94,281 +61,42 @@ public class AdminCrud extends javax.swing.JFrame {
         Stop4TF = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         BusNameTF = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        backToMainBtn2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        adminTA = new javax.swing.JTextArea();
+        displayAll = new javax.swing.JButton();
+        exitBtn2 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        backToMainBtn3 = new javax.swing.JButton();
+        exitBtn3 = new javax.swing.JButton();
+        searchBtn1 = new javax.swing.JButton();
+        busNumberTF = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        clearTF2 = new javax.swing.JButton();
+        updateBusBtn = new javax.swing.JButton();
+        BusName1TF = new javax.swing.JTextField();
+        stopCB1 = new javax.swing.JComboBox<>();
+        stopCB2 = new javax.swing.JComboBox<>();
+        stopCB3 = new javax.swing.JComboBox<>();
+        stopCB4 = new javax.swing.JComboBox<>();
+        jPanel4 = new javax.swing.JPanel();
+        backToMainBtn4 = new javax.swing.JButton();
+        exitBtn4 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jTextField2 = new javax.swing.JTextField();
+        searchDeleteBtn = new javax.swing.JButton();
+        DeleteBusBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
-
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
-
-        backToMainBtn2.setText("Back to Main Menu");
-        backToMainBtn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backToMainBtn2ActionPerformed(evt);
-            }
-        });
-
-        adminTA.setEditable(false);
-        adminTA.setColumns(20);
-        adminTA.setRows(5);
-        jScrollPane1.setViewportView(adminTA);
-
-        displayAll.setText("Display All");
-        displayAll.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                displayAllActionPerformed(evt);
-            }
-        });
-
-        exitBtn2.setText("Exit");
-        exitBtn2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBtn2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(backToMainBtn2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(exitBtn2))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(displayAll)
-                                .addGap(14, 14, 14))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 132, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(displayAll)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backToMainBtn2)
-                    .addComponent(exitBtn2))
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Read", jPanel2);
-
-        jPanel3.setBackground(new java.awt.Color(204, 204, 255));
-
-        backToMainBtn3.setText("Back to Main Menu");
-        backToMainBtn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backToMainBtn3ActionPerformed(evt);
-            }
-        });
-
-        exitBtn3.setText("Exit");
-        exitBtn3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBtn3ActionPerformed(evt);
-            }
-        });
-
-        searchBtn1.setText("Search ID");
-
-        jTextField1.setText("jTextField1");
-
-        jLabel7.setText("Transport Type");
-
-        jLabel8.setText("Transport Number");
-
-        jLabel9.setText("Stop 1");
-
-        jLabel10.setText("Stop 2");
-
-        jLabel11.setText("Stop 3");
-
-        jLabel12.setText("Stop 4");
-
-        updateTransportCBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        clearTF2.setText("Clear");
-
-        updateBusBtn.setText("Update");
-
-        updateTransportNo.setText("jTextField7");
-
-        updateStopNo1.setText("jTextField8");
-
-        updateStopNo2.setText("jTextField9");
-
-        updateStopNo3.setText("jTextField10");
-
-        updateStopno4.setText("jTextField11");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(backToMainBtn3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(exitBtn3))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(clearTF2)
-                                .addGap(18, 18, 18)
-                                .addComponent(updateBusBtn))
-                            .addComponent(updateTransportNo)
-                            .addComponent(updateStopNo1)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(updateTransportCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(updateStopNo2)
-                            .addComponent(updateStopNo3)
-                            .addComponent(updateStopno4)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(113, 113, 113)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(searchBtn1)
-                        .addGap(0, 243, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(searchBtn1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(updateTransportCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(updateTransportNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(updateStopNo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(updateStopNo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(updateStopNo3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(updateStopno4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(clearTF2)
-                    .addComponent(updateBusBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backToMainBtn3)
-                    .addComponent(exitBtn3))
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Update", jPanel3);
-
-        jPanel4.setBackground(new java.awt.Color(204, 204, 255));
-
-        backToMainBtn4.setText("Back to Main Menu");
-        backToMainBtn4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backToMainBtn4ActionPerformed(evt);
-            }
-        });
-
-        exitBtn4.setText("Exit");
-        exitBtn4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBtn4ActionPerformed(evt);
-            }
-        });
-
-        jTextArea2.setEditable(false);
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
-
-        searchDeleteBtn.setText("Search ID");
-
-        DeleteBusBtn.setText("Delete ");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap(369, Short.MAX_VALUE)
-                .addComponent(backToMainBtn4)
-                .addGap(18, 18, 18)
-                .addComponent(exitBtn4)
-                .addGap(24, 24, 24))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)
-                        .addComponent(searchDeleteBtn))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(DeleteBusBtn)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(searchDeleteBtn))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(DeleteBusBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backToMainBtn4)
-                    .addComponent(exitBtn4))
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Delete", jPanel4);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -526,6 +254,274 @@ public class AdminCrud extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Create", jPanel1);
 
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+
+        backToMainBtn2.setText("Back to Main Menu");
+        backToMainBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backToMainBtn2ActionPerformed(evt);
+            }
+        });
+
+        adminTA.setEditable(false);
+        adminTA.setColumns(20);
+        adminTA.setRows(5);
+        jScrollPane1.setViewportView(adminTA);
+
+        displayAll.setText("Display All");
+        displayAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                displayAllActionPerformed(evt);
+            }
+        });
+
+        exitBtn2.setText("Exit");
+        exitBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBtn2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(backToMainBtn2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(exitBtn2))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(displayAll)
+                                .addGap(14, 14, 14))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 132, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(displayAll)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backToMainBtn2)
+                    .addComponent(exitBtn2))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Read", jPanel2);
+
+        jPanel3.setBackground(new java.awt.Color(204, 204, 255));
+
+        backToMainBtn3.setText("Back to Main Menu");
+        backToMainBtn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backToMainBtn3ActionPerformed(evt);
+            }
+        });
+
+        exitBtn3.setText("Exit");
+        exitBtn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBtn3ActionPerformed(evt);
+            }
+        });
+
+        searchBtn1.setText("Search Bus Number");
+        searchBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchBtn1ActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Bus Name");
+
+        jLabel9.setText("Stop 1");
+
+        jLabel10.setText("Stop 2");
+
+        jLabel11.setText("Stop 3");
+
+        jLabel12.setText("Stop 4");
+
+        clearTF2.setText("Clear");
+
+        updateBusBtn.setText("Update");
+        updateBusBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateBusBtnActionPerformed(evt);
+            }
+        });
+
+        BusName1TF.setEditable(false);
+
+        stopCB1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bord Gais Energy Theatre", "Grand Canal Dock", "George's Dock", "Spencer Dock", "Mayor Square", "Busaras", "Custom House", "Custom House Quay", "Point Village", "Point Square", "IFSC", "Tara Street", "OConnell Street", "North Wall Quay", "Hanover Quay", "Barrow Street", "Connolly Station" }));
+
+        stopCB2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bord Gais Energy Theatre", "Grand Canal Dock", "George's Dock", "Spencer Dock", "Mayor Square", "Busaras", "Custom House", "Custom House Quay", "Point Village", "Point Square", "IFSC", "Tara Street", "OConnell Street", "North Wall Quay", "Hanover Quay", "Barrow Street", "Connolly Station" }));
+
+        stopCB3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bord Gais Energy Theatre", "Grand Canal Dock", "George's Dock", "Spencer Dock", "Mayor Square", "Busaras", "Custom House", "Custom House Quay", "Point Village", "Point Square", "IFSC", "Tara Street", "OConnell Street", "North Wall Quay", "Hanover Quay", "Barrow Street", "Connolly Station" }));
+
+        stopCB4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bord Gais Energy Theatre", "Grand Canal Dock", "George's Dock", "Spencer Dock", "Mayor Square", "Busaras", "Custom House", "Custom House Quay", "Point Village", "Point Square", "IFSC", "Tara Street", "OConnell Street", "North Wall Quay", "Hanover Quay", "Barrow Street", "Connolly Station" }));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(backToMainBtn3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(exitBtn3))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(clearTF2)
+                                .addGap(18, 18, 18)
+                                .addComponent(updateBusBtn))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addComponent(busNumberTF, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(searchBtn1))
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(stopCB1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(BusName1TF)
+                                        .addComponent(stopCB3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(stopCB2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(stopCB4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(0, 190, Short.MAX_VALUE)))))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(searchBtn1)
+                    .addComponent(busNumberTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(BusName1TF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(58, 58, 58)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(stopCB1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(stopCB2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11)
+                    .addComponent(stopCB3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(stopCB4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(clearTF2)
+                    .addComponent(updateBusBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backToMainBtn3)
+                    .addComponent(exitBtn3))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Update", jPanel3);
+
+        jPanel4.setBackground(new java.awt.Color(204, 204, 255));
+
+        backToMainBtn4.setText("Back to Main Menu");
+        backToMainBtn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backToMainBtn4ActionPerformed(evt);
+            }
+        });
+
+        exitBtn4.setText("Exit");
+        exitBtn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBtn4ActionPerformed(evt);
+            }
+        });
+
+        jTextArea2.setEditable(false);
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        searchDeleteBtn.setText("Search ID");
+
+        DeleteBusBtn.setText("Delete ");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap(369, Short.MAX_VALUE)
+                .addComponent(backToMainBtn4)
+                .addGap(18, 18, 18)
+                .addComponent(exitBtn4)
+                .addGap(24, 24, 24))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(searchDeleteBtn))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addComponent(DeleteBusBtn)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchDeleteBtn))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(DeleteBusBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backToMainBtn4)
+                    .addComponent(exitBtn4))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Delete", jPanel4);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -656,8 +652,82 @@ public class AdminCrud extends javax.swing.JFrame {
 
     }//GEN-LAST:event_addBusBtnActionPerformed
 
+    private void updateBusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBusBtnActionPerformed
+    try {
+        String busNumber = BusNumberTF.getText();
+        String busName = BusName1TF.getText();
+
+        Bus bus = Bus.getBus(busNumber);
+        if(bus == null){
+            javax.swing.JOptionPane.showMessageDialog(this,"Bus not found!");
+            return;
+        }
+
+        
+
+        // Get stops from combo boxes
+        String stop1 = stopCB1.getSelectedItem().toString();
+        String stop2 = stopCB2.getSelectedItem().toString();
+        String stop3 = stopCB3.getSelectedItem().toString();
+        String stop4 = stopCB4.getSelectedItem().toString();
+
+        // Prevent duplicate stops
+        if(stop1.equals(stop2) || stop1.equals(stop3) || stop1.equals(stop4) ||
+           stop2.equals(stop3) || stop2.equals(stop4) ||
+           stop3.equals(stop4)){
+            javax.swing.JOptionPane.showMessageDialog(this,"Stops cannot be the same!");
+            return;
+        }
+
+        // For simplicity, keep priorities same as 1,2,3,4
+        bus.getStops().clear(); // Remove all old stops
+        bus.addStop(1, stop1);
+        bus.addStop(2, stop2);
+        bus.addStop(3, stop3);
+        bus.addStop(4, stop4);
+
+        // Save to file
+        Bus.saveAllBusesToFile("src/dsca/busData.txt");
+
+        javax.swing.JOptionPane.showMessageDialog(this,"Bus stops updated successfully!");
+
+    } catch(Exception e){
+        javax.swing.JOptionPane.showMessageDialog(this,"Error updating bus.");
+        e.printStackTrace();
+    }
+
+    }//GEN-LAST:event_updateBusBtnActionPerformed
+
+    private void searchBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn1ActionPerformed
+        String busNumber = busNumberTF.getText();
+
+    Bus bus = Bus.getBus(busNumber);
+    if(bus == null){
+        javax.swing.JOptionPane.showMessageDialog(this,"Bus not found!");
+        return;
+    }
+
+    BusName1TF.setText(bus.getBusName());
+
+    // Populate combo boxes with current stops
+    Node current = bus.getStops().getStopsList().getHead();
+    int index = 1;
+    while(current != null){
+        PQElement elem = (PQElement) current.getElement();
+        switch(index){
+            case 1: stopCB1.setSelectedItem(elem.getElement()); break;
+            case 2: stopCB2.setSelectedItem(elem.getElement()); break;
+            case 3: stopCB3.setSelectedItem(elem.getElement()); break;
+            case 4: stopCB4.setSelectedItem(elem.getElement()); break;
+        }
+        index++;
+        current = current.getNext();
+    }
+    }//GEN-LAST:event_searchBtn1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField BusName1TF;
     private javax.swing.JTextField BusNameTF;
     private javax.swing.JTextField BusNumberTF;
     private javax.swing.JButton DeleteBusBtn;
@@ -675,6 +745,7 @@ public class AdminCrud extends javax.swing.JFrame {
     private javax.swing.JButton backToMainBtn2;
     private javax.swing.JButton backToMainBtn3;
     private javax.swing.JButton backToMainBtn4;
+    private javax.swing.JTextField busNumberTF;
     private javax.swing.JButton clearTF1;
     private javax.swing.JButton clearTF2;
     public javax.swing.JButton displayAll;
@@ -697,7 +768,6 @@ public class AdminCrud extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -707,17 +777,14 @@ public class AdminCrud extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JButton searchBtn1;
     private javax.swing.JButton searchDeleteBtn;
+    private javax.swing.JComboBox<String> stopCB1;
+    private javax.swing.JComboBox<String> stopCB2;
+    private javax.swing.JComboBox<String> stopCB3;
+    private javax.swing.JComboBox<String> stopCB4;
     private javax.swing.JButton updateBusBtn;
-    private javax.swing.JTextField updateStopNo1;
-    private javax.swing.JTextField updateStopNo2;
-    private javax.swing.JTextField updateStopNo3;
-    private javax.swing.JTextField updateStopno4;
-    private javax.swing.JComboBox<String> updateTransportCBox;
-    private javax.swing.JTextField updateTransportNo;
     // End of variables declaration//GEN-END:variables
     
 
