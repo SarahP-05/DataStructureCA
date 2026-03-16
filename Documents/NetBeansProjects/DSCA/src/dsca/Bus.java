@@ -108,7 +108,8 @@ public class Bus {
             this.priorityKey = priorityKey;
         }
     }
-
+    
+ 
     
 
 public static String findStopInfo(String stopName) {
@@ -156,5 +157,37 @@ public static String findStopInfo(String stopName) {
     }
 
     return result.toString();
+}
+
+       public static void saveAllBusesToFile(String filePath) {
+
+    try {
+
+        java.io.PrintWriter pw = new java.io.PrintWriter(new java.io.FileWriter(filePath));
+
+        for (Bus bus : buses.values()) {
+
+            Node current = bus.getStops().getStopsList().getHead();
+
+            while (current != null) {
+
+                PQElement elem = (PQElement) current.getElement();
+
+                pw.println(
+                        bus.getBusNumber() + "," +
+                        bus.getBusName() + "," +
+                        elem.getPriorityKey() + "," +
+                        elem.getElement()
+                );
+
+                current = current.getNext();
+            }
+        }
+
+        pw.close();
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
 }
 }

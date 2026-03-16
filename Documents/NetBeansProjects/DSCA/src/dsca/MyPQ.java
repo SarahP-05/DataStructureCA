@@ -33,6 +33,10 @@ public class MyPQ implements PQInterface{
     public int size() { //returns size of SLList to user
         return stops.size();
     }
+    
+    public void clear(){
+    stops = new SLList();
+}
 
 //    @Override
     public void enqueue(int priorityKey, Object element) { //adds stop Name and Number to Stop PQ
@@ -87,5 +91,9 @@ public class MyPQ implements PQInterface{
         }
         return str.toString();
     }
+
+   
+    
+    
     
 }

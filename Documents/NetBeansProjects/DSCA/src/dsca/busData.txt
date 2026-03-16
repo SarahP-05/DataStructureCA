@@ -41,3 +41,11 @@
 27C,Test1,4,Bord Gais Energy Theatre
 27C,Test1,5,George's Dock
 27C,Test1,1,North Wall Quay
+11,Docklands Port 1,1,Spencer Dock
+11,Docklands Port 1,4,Grand Canal Dock
+11,Docklands Port 1,5,North Wall Quay
+11,Docklands Port 1,6,Bord Gais Energy Theatre
+12,Docklands Port 2,6,Bord Gais Energy Theatre
+12,Docklands Port 2,4,Mayor Square
+12,Docklands Port 2,3,Hanover Quay
+12,Docklands Port 2,1,George's Dock

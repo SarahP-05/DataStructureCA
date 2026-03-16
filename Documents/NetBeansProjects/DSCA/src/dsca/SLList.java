@@ -87,4 +87,8 @@ public class SLList implements LinkedListInterface {
     public Node getHead(){
         return head;
     }
+    
+    public void clear(){
+    stopsList = new SLList();
+}
 }
