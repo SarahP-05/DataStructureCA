@@ -108,30 +108,27 @@
                               </Group>
                               <EmptySpace pref="177" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="backToMainBtn1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="exitBtn1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="addBusBtn" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="clearTF1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="Stop2TF" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                                          <Component id="Stop3TF" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                                          <Component id="Stop4TF" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="BusNumberTF" alignment="0" pref="71" max="32767" attributes="0"/>
-                                              <Component id="Stop1TF" alignment="0" max="32767" attributes="0"/>
-                                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="backToMainBtn1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="exitBtn1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="addBusBtn" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="clearTF1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Stop2TF" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                                      <Component id="Stop3TF" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                                      <Component id="Stop4TF" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="BusNumberTF" alignment="0" pref="71" max="32767" attributes="0"/>
+                                          <Component id="Stop1TF" alignment="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -690,9 +687,6 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="BusName1TF">
-              <Properties>
-                <Property name="editable" type="boolean" value="false"/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="stopCB1">
               <Properties>
@@ -914,11 +908,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Search ID"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchDeleteBtnActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="DeleteBusBtn">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delete "/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeleteBusBtnActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

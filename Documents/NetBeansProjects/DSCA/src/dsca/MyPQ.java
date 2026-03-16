@@ -12,7 +12,7 @@ package dsca;
 // Tutorials I watched to better understand PQ & SLL: https://www.youtube.com/watch?v=mcMXy4EH0MQ
 //                                                    https://www.youtube.com/watch?v=fRhbFTOBqjA
 
-public class MyPQ implements PQInterface{
+public class MyPQ implements PQInterface{ //uses the PQInterface to run methods
     private SLList stops;
 
     public MyPQ() { //initialises new SLList
@@ -20,7 +20,7 @@ public class MyPQ implements PQInterface{
     }
     
 
-    public SLList getStopsList() {
+    public SLList getStopsList() { //gets the StopsList from the class SLList 
     return stops; 
 }
     
@@ -47,7 +47,7 @@ public class MyPQ implements PQInterface{
             return;
         }
 
-        Node current = stops.getHead();
+        Node current = stops.getHead(); //provides the current
         Node prev = null;
         int index = 1;
 
@@ -65,7 +65,7 @@ public class MyPQ implements PQInterface{
     }
 
      @Override
-    public Object dequeue() {
+    public Object dequeue() { //removes an item from the PQ
         if (stops.isEmpty()) return null;
         PQElement elem = (PQElement) stops.getHead().getElement();
         stops.removeStop(1);
@@ -73,13 +73,13 @@ public class MyPQ implements PQInterface{
     }
 
     @Override
-    public Object frontOfQueue() {
+    public Object frontOfQueue() { //tells front of queue
         if (stops.isEmpty()) return null; 
             PQElement elem = (PQElement) stops.getHead().getElement();
          return elem.getElement();
     }
     
-     // print queue
+     // prints Pqueue
     public String printQ() {
         Node current = stops.getHead();
         StringBuilder str = new StringBuilder();

@@ -1,13 +1,13 @@
 package dsca;
 
-public class SLList implements LinkedListInterface {
+public class SLList implements LinkedListInterface { //uses the LinkedListInterface Methods
 
-    private Node head;
-    private Node curr;
-    private Node prev;
-    private int size;
+    private Node head; //private node called head
+    private Node curr; //private node called curr
+    private Node prev; //private node called prev
+    private int size; //private node called size
 
-    public SLList() {
+    public SLList() { //this is the original weight to the above Nodes
         size = 0;
         head = null;
         curr = null;
@@ -15,50 +15,51 @@ public class SLList implements LinkedListInterface {
     }
 
     @Override
-    public boolean isEmpty() {
+    public boolean isEmpty() { //checks to see if the SLL is empty
         return size == 0;
     }
 
     @Override
-    public int size() {
+    public int size() { //returns the size of the SLL
         return size;
     }
 
-    public void addStop(int index, Object element) {
 
-        if(index == 1){
-            Node newNode = new Node(element, head);
-            head = newNode;
+    public void addStop(int index, Object element) { //adds stop to SLL
 
-        } else if(head == null){
-            Node newNode = new Node(element);
-            head = newNode;
+        if(index == 1){ //if inserting to beginning of list
+            Node newNode = new Node(element, head); //creates newnode
+            head = newNode; //update head to point at newnode
 
-        } else {
-            setCurrentStop(index);
+        } else if(head == null){ //if list is empty then
+            Node newNode = new Node(element); //create a new node
+            head = newNode; //sets the head as new node (only node)
 
-            Node newNode = new Node(element);
+        } else { //if inserting in the middle of list
+            setCurrentStop(index); //changes curr and prev
 
-             newNode.next = curr;
-            prev.next = newNode;
+            Node newNode = new Node(element); //creates new node with element
+
+             newNode.next = curr; //new node next to curr at the target index
+            prev.next = newNode; //link the prev node to new node
 }
 
-        size++;
+        size++; //increases the size of SLL
     }
 
     private void setCurrentStop(int index){
-        curr = head;
-        prev = null;
+        curr = head; //sets curr to head
+        prev = null; //changes prev to null
 
-        for(int i = 1; i < index; i++){
-            prev = curr;
-            curr = curr.getNext();
+        for(int i = 1; i < index; i++){ 
+            prev = curr; //prev is curr
+            curr = curr.getNext(); //curr is getnext
         }
     }
 
     @Override
     public void removeStop(int index){
-
+        //deletes stop from SLL
         if(isEmpty()){
             return;
         }
@@ -72,10 +73,10 @@ public class SLList implements LinkedListInterface {
             prev.next = curr;
         }
 
-        size--;
+        size--; //reduces size of SLL
     }
 
-    public void printStopList(){
+    public void printStopList(){ //prints all stops in SLL
         Node aNode = head;
 
         while (aNode != null) {
@@ -84,11 +85,9 @@ public class SLList implements LinkedListInterface {
         }
     }
 
-    public Node getHead(){
+    public Node getHead(){ ///returns the head to the user
         return head;
     }
     
-    public void clear(){
-    stopsList = new SLList();
-}
+    
 }

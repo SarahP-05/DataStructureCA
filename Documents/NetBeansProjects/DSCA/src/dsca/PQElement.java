@@ -8,16 +8,18 @@ package dsca;
  *
  * @author sarah
  */
-public class PQElement {
-    private int priorityKey;
-    private Object element;
+public class PQElement { //PQ Methods
+    private int priorityKey; //pq variable
+    private Object element; //pq variable
     
-    public PQElement(int priorityKey, Object element){
+    public PQElement(int priorityKey, Object element){ //full constructor
         this.priorityKey = priorityKey;
         this.element = element;
     }
+    
+    //getters & setterss
 
-    public int getPriorityKey() {
+    public int getPriorityKey() { 
         return priorityKey;
     }
 
@@ -35,6 +37,7 @@ public class PQElement {
     
     
 
+    //to String Method
     @Override
     public String toString() {
         return "PQElement{" + "priorityKey=" + priorityKey + ", element=" + element + '}';

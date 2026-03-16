@@ -8,7 +8,7 @@ package dsca;
  *
  * @author sarah
  */
-public interface PQInterface {
+public interface PQInterface { //Empty Class so PQ can you use these methods
     public void enqueue(int priorityKey, Object element);
     public Object dequeue();
     public Object frontOfQueue();

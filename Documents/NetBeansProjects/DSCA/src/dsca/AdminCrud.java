@@ -18,7 +18,9 @@ public class AdminCrud extends javax.swing.JFrame {
      */
     public AdminCrud() {
         initComponents();
-        String allBuses = Bus.getAllBusesInfo();
+        String allBuses = Bus.getAllBusesInfo(); //gets all bus information
+        Bus.loadBusesFromFile("src/dsca/busData.txt"); //loads the buses from file
+
     }
     
      
@@ -372,8 +374,6 @@ public class AdminCrud extends javax.swing.JFrame {
             }
         });
 
-        BusName1TF.setEditable(false);
-
         stopCB1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bord Gais Energy Theatre", "Grand Canal Dock", "George's Dock", "Spencer Dock", "Mayor Square", "Busaras", "Custom House", "Custom House Quay", "Point Village", "Point Square", "IFSC", "Tara Street", "OConnell Street", "North Wall Quay", "Hanover Quay", "Barrow Street", "Connolly Station" }));
 
         stopCB2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bord Gais Energy Theatre", "Grand Canal Dock", "George's Dock", "Spencer Dock", "Mayor Square", "Busaras", "Custom House", "Custom House Quay", "Point Village", "Point Square", "IFSC", "Tara Street", "OConnell Street", "North Wall Quay", "Hanover Quay", "Barrow Street", "Connolly Station" }));
@@ -485,8 +485,18 @@ public class AdminCrud extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextArea2);
 
         searchDeleteBtn.setText("Search ID");
+        searchDeleteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchDeleteBtnActionPerformed(evt);
+            }
+        });
 
         DeleteBusBtn.setText("Delete ");
+        DeleteBusBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteBusBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -551,44 +561,44 @@ public class AdminCrud extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void exitBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtn3ActionPerformed
-        System.exit(0);
+        System.exit(0); //exits the system
     }//GEN-LAST:event_exitBtn3ActionPerformed
 
     private void backToMainBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToMainBtn3ActionPerformed
-        new FirstJFrame().setVisible(true);
-           this.dispose();
+        new FirstJFrame().setVisible(true); //when the 'Back' button is pressed this code is run
+           this.dispose(); //disposes this frame
     }//GEN-LAST:event_backToMainBtn3ActionPerformed
 
     private void backToMainBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToMainBtn2ActionPerformed
-        new FirstJFrame().setVisible(true);
-           this.dispose();
+        new FirstJFrame().setVisible(true);//when the 'Back' button is pressed this code is run
+           this.dispose(); //disposes this frame
     }//GEN-LAST:event_backToMainBtn2ActionPerformed
 
     private void backToMainBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToMainBtn4ActionPerformed
-       new FirstJFrame().setVisible(true);
-           this.dispose();
+       new FirstJFrame().setVisible(true);//when the 'Back' button is pressed this code is run
+           this.dispose(); //disposes this frame
     }//GEN-LAST:event_backToMainBtn4ActionPerformed
 
     private void exitBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtn2ActionPerformed
-        System.exit(0);
+        System.exit(0);  //exits the system
     }//GEN-LAST:event_exitBtn2ActionPerformed
 
     private void exitBtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtn4ActionPerformed
-        System.exit(0);
+        System.exit(0);  //exits the system
     }//GEN-LAST:event_exitBtn4ActionPerformed
 
     private void displayAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayAllActionPerformed
-        String allBuses = Bus.getAllBusesInfo(); 
-        adminTA.setText(allBuses); 
+        String allBuses = Bus.getAllBusesInfo(); //displays all buses 
+        adminTA.setText(allBuses);  //in admin crud 
     }//GEN-LAST:event_displayAllActionPerformed
 
     private void exitBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtn1ActionPerformed
-        System.exit(0);
+        System.exit(0);  //exits the system
     }//GEN-LAST:event_exitBtn1ActionPerformed
 
     private void backToMainBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToMainBtn1ActionPerformed
-        new FirstJFrame().setVisible(true);
-        this.dispose();
+        new FirstJFrame().setVisible(true); //sends user to the firstJFrame
+        this.dispose(); //disposes of current frame
     }//GEN-LAST:event_backToMainBtn1ActionPerformed
 
     private void Stop2TFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Stop2TFActionPerformed
@@ -599,35 +609,34 @@ public class AdminCrud extends javax.swing.JFrame {
                                              
     try {
 
-        String busNumber = BusNumberTF.getText();
-        String busName = BusNameTF.getText();
+        String busNumber = BusNumberTF.getText(); //gets busnumber from text field
+        String busName = BusNameTF.getText(); //gets busname from text field
 
-        String stop1 = StopCB1.getSelectedItem().toString();
-        String stop2 = StopCB2.getSelectedItem().toString();
-        String stop3 = StopCB3.getSelectedItem().toString();
-        String stop4 = StopCB4.getSelectedItem().toString();
+        String stop1 = StopCB1.getSelectedItem().toString(); //gets stop info from combo box
+        String stop2 = StopCB2.getSelectedItem().toString(); //gets stop info from combo box
+        String stop3 = StopCB3.getSelectedItem().toString(); //gets stop info from combo box
+        String stop4 = StopCB4.getSelectedItem().toString(); //gets stop info from combo box
 
-        int p1 = Integer.parseInt(Stop1TF.getText());
-        int p2 = Integer.parseInt(Stop2TF.getText());
-        int p3 = Integer.parseInt(Stop3TF.getText());
-        int p4 = Integer.parseInt(Stop4TF.getText());
+        int p1 = Integer.parseInt(Stop1TF.getText()); //gets priority info from text field
+        int p2 = Integer.parseInt(Stop2TF.getText()); //gets priority info from text field
+        int p3 = Integer.parseInt(Stop3TF.getText()); //gets priority info from text field
+        int p4 = Integer.parseInt(Stop4TF.getText()); //gets priority info from text field
 
-        // Prevent duplicate stops
+        
         if(stop1.equals(stop2) || stop1.equals(stop3) || stop1.equals(stop4) ||
            stop2.equals(stop3) || stop2.equals(stop4) ||
-           stop3.equals(stop4)){
-
+           stop3.equals(stop4)){ //this is to prevent duplicate stops
             javax.swing.JOptionPane.showMessageDialog(this,"Stops cannot be the same!");
-            return;
+            return; //this is displayed if stop names are the same
         }
 
-        // Prevent duplicate priorities
+        
         if(p1==p2 || p1==p3 || p1==p4 ||
            p2==p3 || p2==p4 ||
-           p3==p4){
+           p3==p4){ //this is to prevent duplicate priorities
 
             javax.swing.JOptionPane.showMessageDialog(this,"Priority numbers must be unique!");
-            return;
+            return; //this is displayed if priority numbers are the same
         }
 
         // Check if bus exists
@@ -644,7 +653,7 @@ public class AdminCrud extends javax.swing.JFrame {
         bus.addStop(p3, stop3);
         bus.addStop(p4, stop4);
 
-        // Save to file
+        // Saves new bus information to file
         PrintWriter pw = new PrintWriter(new FileWriter("src/dsca/busData.txt", true));
 
         pw.println(busNumber + "," + busName + "," + p1 + "," + stop1);
@@ -652,8 +661,9 @@ public class AdminCrud extends javax.swing.JFrame {
         pw.println(busNumber + "," + busName + "," + p3 + "," + stop3);
         pw.println(busNumber + "," + busName + "," + p4 + "," + stop4);
 
-        pw.close();
+        pw.close(); //closes the file
 
+        //clears the create gui layout when the bus has been added to the txt file
         BusNumberTF.setText("");
         BusNameTF.setText("");
 
@@ -662,19 +672,19 @@ public class AdminCrud extends javax.swing.JFrame {
         Stop3TF.setText("");
         Stop4TF.setText("");
         
-        javax.swing.JOptionPane.showMessageDialog(this,"Bus added successfully!");
+        javax.swing.JOptionPane.showMessageDialog(this,"Bus added successfully!"); //appears when added successfully
 
     } catch(Exception e){
-        javax.swing.JOptionPane.showMessageDialog(this,"Error adding bus");
+        javax.swing.JOptionPane.showMessageDialog(this,"Error adding bus"); //if an error occurs, this appears
         e.printStackTrace();
     }
 
     }//GEN-LAST:event_addBusBtnActionPerformed
 
     private void updateBusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBusBtnActionPerformed
-    try {
-        String busNumber = BusNumberTF.getText();
-        String busName = BusName1TF.getText();
+     try {
+        String busNumber = busNumberTF.getText().trim();
+        String newBusName = BusName1TF.getText().trim();
 
         Bus bus = Bus.getBus(busNumber);
         if(bus == null){
@@ -682,7 +692,8 @@ public class AdminCrud extends javax.swing.JFrame {
             return;
         }
 
-        
+        // Update bus name
+        bus.setBusName(newBusName);
 
         // Get stops from combo boxes
         String stop1 = stopCB1.getSelectedItem().toString();
@@ -698,53 +709,55 @@ public class AdminCrud extends javax.swing.JFrame {
             return;
         }
 
-        // For simplicity, keep priorities same as 1,2,3,4
-        bus.getStops().clear(); // Remove all old stops
+        // Clear old stops and add new ones with priorities 1-4
+        bus.getStops().clear();
         bus.addStop(1, stop1);
         bus.addStop(2, stop2);
         bus.addStop(3, stop3);
         bus.addStop(4, stop4);
 
-        // Save to file
+        // Save all buses to file
         Bus.saveAllBusesToFile("src/dsca/busData.txt");
 
-        javax.swing.JOptionPane.showMessageDialog(this,"Bus stops updated successfully!");
+        javax.swing.JOptionPane.showMessageDialog(this,"Bus updated successfully!"); //appears when bus is added succesfully
 
     } catch(Exception e){
-        javax.swing.JOptionPane.showMessageDialog(this,"Error updating bus.");
+        javax.swing.JOptionPane.showMessageDialog(this,"Error updating bus."); //if error occurs
         e.printStackTrace();
     }
 
     }//GEN-LAST:event_updateBusBtnActionPerformed
 
     private void searchBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn1ActionPerformed
-        String busNumber = busNumberTF.getText();
+         String busNumber = busNumberTF.getText().trim(); //gets the bus number from the ta
 
-    Bus bus = Bus.getBus(busNumber);
+    Bus bus = Bus.getBus(busNumber); //searches for the bus in the getBus method
     if(bus == null){
         javax.swing.JOptionPane.showMessageDialog(this,"Bus not found!");
         return;
     }
 
+    // Fill name and stops from the programs memory
     BusName1TF.setText(bus.getBusName());
 
-    // Populate combo boxes with current stops
+    //updates the fields in the update tab with the associated information
     Node current = bus.getStops().getStopsList().getHead();
     int index = 1;
     while(current != null){
         PQElement elem = (PQElement) current.getElement();
-        switch(index){
+        switch(index){ //sets combo boxed to searched bus info
             case 1: stopCB1.setSelectedItem(elem.getElement()); break;
             case 2: stopCB2.setSelectedItem(elem.getElement()); break;
             case 3: stopCB3.setSelectedItem(elem.getElement()); break;
             case 4: stopCB4.setSelectedItem(elem.getElement()); break;
         }
-        index++;
+        index++; //increases the size of the sll and pq
         current = current.getNext();
     }
     }//GEN-LAST:event_searchBtn1ActionPerformed
 
     private void clearTF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearTF1ActionPerformed
+       //clears the information in the text fields
         BusNumberTF.setText("");
         BusNameTF.setText("");
 
@@ -756,8 +769,47 @@ public class AdminCrud extends javax.swing.JFrame {
     }//GEN-LAST:event_clearTF1ActionPerformed
 
     private void clearTF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearTF2ActionPerformed
-        // TODO add your handling code here:
+        //clears the information in the text fields
+        BusNumberTF.setText("");
+        BusName1TF.setText("");
+        
+        stopCB1.setSelectedIndex(0);
+        stopCB2.setSelectedIndex(0);
+        stopCB3.setSelectedIndex(0);
+        stopCB4.setSelectedIndex(0);
     }//GEN-LAST:event_clearTF2ActionPerformed
+
+    private void searchDeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchDeleteBtnActionPerformed
+         String busNumber = jTextField2.getText().trim(); //gets the bus number from the tf
+    Bus bus = Bus.getBus(busNumber); //searches for bus
+
+    if (bus == null) { //if bus is not found then this appears
+        javax.swing.JOptionPane.showMessageDialog(this, "Bus not found!");
+        jTextArea2.setText(""); //clears the tf
+        return;
+    }
+
+    // Display bus info in the text area if found
+    jTextArea2.setText(bus.getBusInfo());
+    }//GEN-LAST:event_searchDeleteBtnActionPerformed
+
+    private void DeleteBusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteBusBtnActionPerformed
+         String busNumber = jTextField2.getText().trim(); //gets the bus number from the tf
+
+    if(busNumber.isEmpty()){ //if bus number search field is empty then below appears
+        javax.swing.JOptionPane.showMessageDialog(this, "Enter a bus number to delete!");
+        return;
+    }
+
+    boolean deleted = Bus.deleteBus(busNumber); //checks to see if bus found & deletes it
+    if(deleted){ //if deleted bus is true
+        javax.swing.JOptionPane.showMessageDialog(this, "Bus deleted successfully!");
+        jTextArea2.setText(""); //clears the textarea
+        jTextField2.setText(""); //clears the text field
+    } else {
+        javax.swing.JOptionPane.showMessageDialog(this, "Bus not found!"); //bus not found:
+    }
+    }//GEN-LAST:event_DeleteBusBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -8,23 +8,24 @@ package dsca;
  *
  * @author sarah
  */
-public class Node {
+public class Node { //Node class
     protected Object element;
     protected Node next;
 
-    public Node() {
+    public Node() { //empty constructor
     }
     
-    public Node(Object element) {
+    public Node(Object element) { //full constructor
         this.element = element;
         next  = null;
     }
 
-    public Node(Object element, Node next) {
+    public Node(Object element, Node next) { //full constructor no. 2
         this.element = element;
         this.next = next;
     }
 
+    //getters and setters
     public Object getElement() {
         return element;
     }
@@ -41,6 +42,7 @@ public class Node {
         this.next = next;
     }
 
+    //toString method
     @Override
     public String toString() {
        // return "Node{" + "element=" + element + ", next=" + next + '}';

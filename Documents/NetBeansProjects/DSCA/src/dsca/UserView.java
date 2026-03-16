@@ -10,16 +10,14 @@ package dsca;
  */
 public class UserView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AdminLogin
-     */
+    
     public UserView() {
         initComponents();
     }
 
-    public void displayAllBusesInTextArea() {
-    String allBuses = Bus.getAllBusesInfo(); 
-    taUser.setText(allBuses);                
+    public void displayAllBusesInTextArea() { //method used to print all buses to the main User Text Area
+    String allBuses = Bus.getAllBusesInfo();  //gets all buses
+    taUser.setText(allBuses);                //sets text in taUser to the allBuses String
 }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -138,24 +136,24 @@ public class UserView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void busbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_busbtnActionPerformed
-        displayAllBusesInTextArea();
+        displayAllBusesInTextArea(); //uses the above method to display buses
     }//GEN-LAST:event_busbtnActionPerformed
 
     private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
-        new FirstJFrame().setVisible(true);
-           this.dispose();
+        new FirstJFrame().setVisible(true); //when you click the 'Back' button it send the user to the previous jframe
+           this.dispose(); //disposes this frame
     }//GEN-LAST:event_backbtnActionPerformed
 
     private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
-        System.exit(0);
+        System.exit(0); //exits the system
     }//GEN-LAST:event_exitBtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String stopName = stopSearchCB.getSelectedItem().toString();
+        String stopName = stopSearchCB.getSelectedItem().toString(); //intakes the stop the user entered
 
-        String result = Bus.findStopInfo(stopName);
+        String result = Bus.findStopInfo(stopName); //finds and adds it to a list of buses with the same stop name
 
-        taUser.setText(result);
+        taUser.setText(result); //sets all the results to the Text Area
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -86,13 +86,13 @@ public class FirstJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void uViewbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uViewbtnActionPerformed
-         new UserView().setVisible(true);
-           this.dispose();
+         new UserView().setVisible(true); //if you click View as User
+           this.dispose(); //disposes this frame
     }//GEN-LAST:event_uViewbtnActionPerformed
 
     private void aViewbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aViewbtnActionPerformed
-         new AdminCrud().setVisible(true);
-           this.dispose();
+         new AdminCrud().setVisible(true);  //if you click View as Admin
+           this.dispose(); //disposes this frame
     }//GEN-LAST:event_aViewbtnActionPerformed
 
     /**
